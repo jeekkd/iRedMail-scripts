@@ -1,13 +1,11 @@
-
 Administrative scripts for iRedMail, useful if you do not use iRedAdmin. 
 
 Read the examples and usage in each script to understand the parameters to use. Each script will generate SQL for you to use. These scripts are for a iRedMail installation with an SQL back end, specifically PostgreSQL.
 
 There are scripts so far to do the following administrative functions:
 
-
 | Category      | Script                              | What it does                                                                                                                                |
-|---------------|-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | User accounts |                                     |                                                                                                                                             |
 |               | remove-user.sh                      | Delete a user                                                                                                                               |
 |               | update-account-password.sh          | Update a users password                                                                                                                     |
@@ -43,4 +41,3 @@ There are scripts so far to do the following administrative functions:
 |               | update-domain-quota.sh              | Updates the domain wide mailbox quota                                                                                                       |
 |               | enable-domain.sh                    | Enables a domain in the database, must exist already                                                                                        |
 |               | disable-domain.sh                   | Disables a domain in the database                                                                                                           |
-
