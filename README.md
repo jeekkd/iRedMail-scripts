@@ -33,11 +33,13 @@ There are scripts so far to do the following administrative functions:
 |               | is-forward-to.sh                    | List if any addresses are set to forward to a given address                                                                                 |
 |               | is-forward-from.sh                  | List if any addresses are set to forward fromm a given address                                                                              |
 |               | disable-mail-forwarding.sh          | Disables mail forwarding from a given address to another entered address, but do not delete the configured forward                          |
+| Domain        |                                     |                                                                                                                                             |
+|               | update-domain-quota.sh              | Updates the domain wide mailbox quota                                                                                                       |
+|               | enable-domain.sh                    | Enables a domain in the database, must exist already                                                                                        |
+|               | disable-domain.sh                   | Disables a domain in the database                                                                                                           |
 | Misc          |                                     |                                                                                                                                             |
 |               | list-top-10-mailbox.sh              | List the top 10 mailboxes by size                                                                                                           |
 |               | list-largest-to-smallest-mailbox.sh | List mailbox size from largest to smallest                                                                                                  |
 |               | update-storagenode.sh               | Mail is located at /var/vmail/vmail1 by default, this script helps change the database value of 'vmail1' to a new value                     |
 |               | update-storagebasedirectory.sh      | The base directory for mail is located at /var/vmail by default, this script helps change the database value of '/var/vmail' to a new value |
-|               | update-domain-quota.sh              | Updates the domain wide mailbox quota                                                                                                       |
-|               | enable-domain.sh                    | Enables a domain in the database, must exist already                                                                                        |
-|               | disable-domain.sh                   | Disables a domain in the database                                                                                                           |
+
