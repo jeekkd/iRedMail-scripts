@@ -7,6 +7,7 @@ There are scripts so far to do the following administrative functions:
 | Category      | Script                              | What it does                                                                                                                                |
 | ------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | User accounts |                                     |                                                                                                                                             |
+|               | create-new-user.sh                  | Creates a new user, with an optional feature of created users having default aliases                                                                                                                               |
 |               | remove-user.sh                      | Delete a user                                                                                                                               |
 |               | update-account-password.sh          | Update a users password                                                                                                                     |
 |               | disable-mail-forwarding.sh          | De-activate a user account                                                                                                                  |
@@ -18,7 +19,6 @@ There are scripts so far to do the following administrative functions:
 |               | enable-imap-for-user.sh             | Enables IMAP for a user account, enables usage of this protocol                                                                             |
 |               | disable-pop3-for-user.sh            | Disables pop3 for a user account, prevents usage of this protocol                                                                           |
 |               | disable-imap-for-user.sh            | Disables IMAP for a user account, prevents usage of this protocol                                                                           |
-|               | is-address-an-alias.sh              | Check if a given email address is an alias                                                                                                  |
 |               | increase-mailbox-quota.sh           | Increases the mail box quota size for a given user                                                                                          |
 | Aliases       |                                     |                                                                                                                                             |
 |               | create-alias.sh                     | Create an alias                                                                                                                             |
@@ -26,6 +26,7 @@ There are scripts so far to do the following administrative functions:
 |               | remove-alias.sh                     | Remove a given alias                                                                                                                        |
 |               | set-alias-active.sh                 | Set an alias as active                                                                                                                      |
 |               | set-alias-inactive.sh               | Set an alias as inactive                                                                                                                    |
+|               | is-address-an-alias.sh              | Check if a given email address is an alias                                                                                                  |
 | Forwarding    |                                     |                                                                                                                                             |
 |               | list-forwarding.sh                  | List any configured forwards                                                                                                                |
 |               | remove-forwarding.sh                | Deletes mail forwarding from a given address to another entered address                                                                     |
