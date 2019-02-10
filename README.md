@@ -23,6 +23,7 @@ There are scripts so far to do the following administrative functions:
 | Aliases       |                                     |                                                                                                                                             |
 |               | create-alias.sh                     | Create an alias                                                                                                                             |
 |               | add-user-to-alias.sh                | Add a user to an alias. Multiple users can be added to the same alias, use the script as many times as necessary.                           |
+|               | create-alias-policy.sh              | Creates or updates an access policy for an alias to restrict which senders are allowed to send email to this mail alias                     |
 |               | remove-alias.sh                     | Remove a given alias                                                                                                                        |
 |               | set-alias-active.sh                 | Set an alias as active                                                                                                                      |
 |               | set-alias-inactive.sh               | Set an alias as inactive                                                                                                                    |

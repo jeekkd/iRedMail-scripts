@@ -97,10 +97,19 @@ if [ X"${MAILDIR_STYLE}" == X"hashed" ]; then
 
     # Use mbox, will be changed later.
     maildir="${domain}/${str1}/${str2}/${str3}/${username}-${DATE}/"
+    printf "Create users maildir with the following command: \n"
+    printf "mkdir -p ${STORAGE_BASE_DIRECTORY}/${domain}/${str1}/${str2}/${str3}/${username}-${DATE}/ \n"
+    printf "chown -R vmail:vmail ${STORAGE_BASE_DIRECTORY}/${domain}/${str1}/ \n"
+    printf "\n"
 else
     maildir="${domain}/${username}-${DATE}/"
+    printf "Create users maildir with the following command: \n"
+    printf "mkdir -p ${STORAGE_BASE_DIRECTORY}/${domain}/${username}-${DATE}/"
+    printf "chown -R vmail:vmail ${STORAGE_BASE_DIRECTORY}/${domain}/${username}-${DATE}/ \n"
+    printf "\n"
 fi
 
+printf "Run the following query in your vmail db: \n"
 printf "INSERT INTO mailbox (username, password, name, storagebasedirectory,storagenode, maildir, quota, domain, active, passwordlastchange, created)
              VALUES ('${mail}', '${CRYPT_PASSWD}', '${username}', '${STORAGE_BASE}','${STORAGE_NODE}', '${maildir}', '${DEFAULT_QUOTA}', '${domain}', '1', NOW(), NOW());
 INSERT INTO forwardings (address, forwarding, domain, dest_domain, is_forwarding)
