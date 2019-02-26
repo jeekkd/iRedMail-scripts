@@ -16,8 +16,10 @@ There are scripts so far to do the following administrative functions:
 |               | list-inactive-accounts.sh           | List inactive user accounts                                                                                                                 |
 |               | list-all-but-regular-accounts.sh    | Lists all from the forwardings table that are not just regular accounts                                                                     |
 |               | enable-pop3-for-user.sh             | Enables pop3 for a user account, enables usage of this protocol                                                                             |
+|               | enable-pop3-for-domain.sh           | Enables pop3 for all accounts on a given domain                                                                                             |
 |               | enable-imap-for-user.sh             | Enables IMAP for a user account, enables usage of this protocol                                                                             |
 |               | disable-pop3-for-user.sh            | Disables pop3 for a user account, prevents usage of this protocol                                                                           |
+|               | disable-pop3-for-domain.sh          | Disables pop3 for all accounts on a given domain                                                                                            |
 |               | disable-imap-for-user.sh            | Disables IMAP for a user account, prevents usage of this protocol                                                                           |
 |               | increase-mailbox-quota.sh           | Increases the mail box quota size for a given user                                                                                          |
 | Aliases       |                                     |                                                                                                                                             |
