@@ -1,6 +1,11 @@
 Administrative scripts for iRedMail, useful if you do not use iRedAdmin. 
 
-Read the examples and usage in each script to understand the parameters to use. Each script will generate SQL for you to use. These scripts are for a iRedMail installation with an SQL back end, specifically PostgreSQL.
+To receive help output and what the command does, run a script with the --h parameter. Each script will generate SQL for you to use. These scripts are for a iRedMail installation with an SQL back end, These scripts are for an 
+iRedMail installation with a SQL back end, PostgreSQL is what the scripts are tested against.
+
+These scripts were first written to target iRedMail 0.9.9, they will be updated to work with new versions as they are released however if you catch something before me please create an issue and I will address it.
+
+iRedMail version currently targetted: 0.9.9
 
 There are scripts so far to do the following administrative functions:
 
