@@ -30,6 +30,6 @@ if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; th
 	exit 0
 fi
 
-printf "UPDATE mailbox SET enablepop3 = '0' WHERE username = '$username';\n"
-printf "UPDATE mailbox SET enablepop3secured = '0' WHERE username = '$username';\n"
-printf "UPDATE mailbox SET enablepop3tls = '0' WHERE username = '$username';\n"
+printf "UPDATE mailbox SET enablepop3 = '0' WHERE username = '$username' AND enablepop3 = '1';\n"
+printf "UPDATE mailbox SET enablepop3secured = '0' WHERE username = '$username' AND enablepop3secured = '1';\n"
+printf "UPDATE mailbox SET enablepop3tls = '0' WHERE username = '$username' AND enablepop3tls = '1';\n"

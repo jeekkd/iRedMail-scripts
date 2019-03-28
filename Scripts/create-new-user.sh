@@ -7,7 +7,7 @@
 # 
 # Usage:
 # Edit these variables:
-# STORAGE_BASE_DIRECTORY
+# PASSWORD_SCHEME
 # DEFAULT_QUOTA='1024'   # 1024 is 1GB
 # ALIAS_ARRAY
 #
