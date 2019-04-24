@@ -1,18 +1,14 @@
 Administrative scripts for iRedMail, useful if you do not use iRedAdmin. 
 
-To receive help output and what the command does, run a script with the --h parameter. Each script will generate SQL for you to use. These scripts are for a iRedMail installation with an SQL back end, These scripts are for an 
-iRedMail installation with a SQL back end, PostgreSQL is what the scripts are tested against.
-
-These scripts were first written to target iRedMail 0.9.9, they will be updated to work with new versions as they are released however if you catch something before me please create an issue and I will address it.
-
-iRedMail version currently targetted: 0.9.9
+Read the examples and usage in each script to understand the parameters to use. Each script will generate SQL for you to use. These scripts are for a iRedMail installation with an SQL back end, specifically PostgreSQL.
 
 There are scripts so far to do the following administrative functions:
 
 | Category      | Script                              | What it does                                                                                                                                |
 | ------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | User accounts |                                     |                                                                                                                                             |
-|               | create-new-user.sh                  | Creates a new user, with an optional feature of created users having default aliases                                                                                                                               |
+|               | create-new-user.sh                  | Creates a new user, with an optional feature of created users being a part of default aliases												|
+|               | create-new-user-bulk.sh             | Creates new users from a CSV file, with an optional feature of created users being a part of default aliases								|                                                                                                              |
 |               | remove-user.sh                      | Delete a user                                                                                                                               |
 |               | update-account-password.sh          | Update a users password                                                                                                                     |
 |               | disable-mail-forwarding.sh          | De-activate a user account                                                                                                                  |
@@ -43,6 +39,8 @@ There are scripts so far to do the following administrative functions:
 |               | is-forward-from.sh                  | List if any addresses are set to forward fromm a given address                                                                              |
 |               | disable-mail-forwarding.sh          | Disables mail forwarding from a given address to another entered address, but do not delete the configured forward                          |
 | Domain        |                                     |                                                                                                                                             |
+|               | add-domain.sh                       | Creates a new domain in the database, after which you can begin creating user accounts in the new domain                                    |
+|               | remove-domain.sh                    | Removes a domain from the database																											|
 |               | update-domain-quota.sh              | Updates the domain wide mailbox quota                                                                                                       |
 |               | enable-domain.sh                    | Enables a domain in the database, must exist already                                                                                        |
 |               | disable-domain.sh                   | Disables a domain in the database                                                                                                           |

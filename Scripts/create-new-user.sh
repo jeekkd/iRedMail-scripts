@@ -42,7 +42,7 @@ PASSWORD_SCHEME='BCRYPT'
 # Default mail quota (in MB).
 DEFAULT_QUOTA='1024'
 
-# The default aliases you want the new mail account to be apart of. The aliases must first exist, and also adding the domain portion to the alias is unnecessary - see the example below.
+# The default alias(es) you want all new mail accounts to be apart of. The aliases must first exist, and also adding the domain portion to the alias is unnecessary - see the example below.
 # Format example: ALIAS_ARRAY=("allcompany" "announcements" "alerts")
 ALIAS_ARRAY=("")
 
