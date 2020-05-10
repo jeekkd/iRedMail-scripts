@@ -21,7 +21,7 @@
 # psql -d vmail
 # sql> \i /path/to/output.sql;
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -gt 0 ]; then
 	printf "Purpose: Lists all email accounts in iRedmail from the mailbox table, does not include aliases. \n"
 	printf "Usage: sh list-all-accounts.sh \n"
 	exit 0

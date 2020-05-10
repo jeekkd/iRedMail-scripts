@@ -24,7 +24,7 @@
 # Read input
 username="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Enables enablepop3,enablepop3secured,enablepop3tls in the mailbox table for a given user to be 1 (enabled) in iRedmail so to disable pop3. \n"
 	printf "Usage: sh enable-pop3-for-user.sh jeff@example.com \n"
 	exit 0

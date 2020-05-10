@@ -25,7 +25,7 @@
 # Read input
 address="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Determine if a given email address is an alias in iRedmail. \n"
 	printf "Usage: sh is-address-an-alias.sh jeff@example.com \n"
 	exit 0

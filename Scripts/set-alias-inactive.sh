@@ -24,7 +24,7 @@
 # Read input
 aliasName="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Updates an alias to become inactive in iRedmail. \n"
 	printf "Usage: sh set-alias-inactive.sh alias@mydomain.com \n"
 	exit 0

@@ -24,7 +24,7 @@
 # Read input
 domain="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Disables a domain in iRedMail. \n"
 	printf "Usage: sh disable-domain.sh example.com \n"
 	exit 0

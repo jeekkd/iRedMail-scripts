@@ -24,7 +24,7 @@
 # Read input
 aliasName="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Creates an alias address which can be used to send email to multiple users at once when they are added 'onto' the alias in iRedmail. \n"
 	printf "Usage:  \n"
 	exit 0

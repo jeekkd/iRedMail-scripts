@@ -28,7 +28,7 @@
 current="$1"
 new="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Updates the storagenode in iRedmail, this by default is vmail1. \n"
 	printf "Usage: sh update-storagenode.sh vmail1 vmail2 \n"
 	exit 0

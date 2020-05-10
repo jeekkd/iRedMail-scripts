@@ -24,7 +24,7 @@
 # Read input
 address="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Re-activate a user account iRedmail. \n"
 	printf "Usage: sh set-account-active.sh jeff@example.com \n"
 	exit 0

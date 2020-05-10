@@ -27,7 +27,7 @@
 aliasAccount="$1"
 sendToEmail="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Add a user to an alias in iRedmail. \n"
 	printf "Usage: sh add-user-to-alias.sh alias@mydomain.com jeff@gmail.com \n"
 	exit 0
@@ -36,4 +36,4 @@ fi
 aliasAccountDomain=$(echo $aliasAccount | cut -f 2 -d '@')
 sendToEmailDomain=$(echo $sendToEmail | cut -f 2 -d '@')
 
-printf "INSERT INTO forwardings (address, forwarding, domain, dest_domain, is_list, active) VALUES ('${aliasAccount}', '${sendToEmail}', '${aliasAccountDomain}', '${sendToEmailDomain}', 1, 1); \n"
+printf "INSERT INTO forwardings (address, forwarding, domain, dest_domain, is_list, active) VALUES ('${aliasAccount}', '${sendToEmail}', '${aliasAccountDomain}', '${sendToEmailDomain}', 0, 1); \n"

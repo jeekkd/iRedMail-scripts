@@ -35,7 +35,7 @@
 dlName="$1"
 policy="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Creates or updates an access policy for an alias to restrict which senders are allowed to send email to this mail alias, in iRedMail. \n"
 	printf "Available access policies: \n"
 	printf "public 	no restrictions \n"

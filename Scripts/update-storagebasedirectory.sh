@@ -28,7 +28,7 @@
 current="$1"
 new="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Updates the storagebasedirectory in iRedmail, this by default is /var/vmail. \n"
 	printf "Usage: sh update-storagebasedirectory.sh /var/vmail /var/someNewLocation \n"
 	exit 0

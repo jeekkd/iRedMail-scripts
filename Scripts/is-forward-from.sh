@@ -24,7 +24,7 @@
 # Read input
 address="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Determine if a given email address has forwards set from itself to other email addreses in iRedmail. \n"
 	printf "Usage: sh is-forward-from.sh jeff@example.com \n"
 	exit 0

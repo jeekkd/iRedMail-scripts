@@ -32,7 +32,7 @@
 address="$1"
 password="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Updates the password for a user account in iRedmail. \n"
 	printf "Note: You can also use this script to change hashing algorithms. If you made an account with SHA512 but actually wanted bcrypt you can change that by updating the password."
 	printf "Instructions: 

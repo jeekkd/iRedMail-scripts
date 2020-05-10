@@ -27,7 +27,7 @@
 address="$1"
 quota="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Updates the allowed mailbox size (quota) for a user in iRedmail. \n"
 	printf "Usage: sh increase-mailbox-quota.sh jeff@example.com 2048 \n"
 	exit 0

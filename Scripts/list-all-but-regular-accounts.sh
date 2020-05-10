@@ -21,7 +21,7 @@
 # psql -d vmail
 # sql> \i /path/to/output.sql;
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -gt 0 ]; then
 	printf "Purpose: Lists all from the forwardings table that are not just regular accounts in iRedmail. \n"
 	printf "Usage: sh list-all-but-regular-accounts.sh \n"
 	exit 0

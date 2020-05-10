@@ -25,7 +25,7 @@
 fromUser="$1"
 toUser="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Re-enable mail forwarding or from an alias, from a user account to another mail account in iRedmail. \n"
 	printf "Usage: sh enable-mail-forwarding.sh fromUser@example.com toUser@example.com \n"
 	exit 0

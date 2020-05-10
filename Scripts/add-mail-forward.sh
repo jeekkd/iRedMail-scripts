@@ -27,7 +27,7 @@
 address="$1"
 forwardToEmail="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Creates a mail forwarding setup to direct email sent to user@example.com otherUser@example.com in iRedmail. \n"
 	printf "Usage: sh add-mail-forward.sh user@example.com otherUser@example.com \n"
 	exit 0

@@ -25,7 +25,7 @@
 dlName="$1"
 domainName="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Creates an alias in iRedmail, email sent to an alias goes to all addresses added onto the alias. \n"
 	printf "Usage: sh create-alias.sh alias@mydomain.com mydomain.com \n"
 	exit 0

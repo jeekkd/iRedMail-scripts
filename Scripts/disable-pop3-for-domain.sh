@@ -28,7 +28,7 @@
 # Read input
 domain="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Disables enablepop3,enablepop3secured,enablepop3tls in the mailbox table for a given domain to be 0 (disabled) in iRedmail so to disable pop3. \n"
 	printf "Usage: sh disable-pop3-for-domain.sh example.com \n"
 	exit 0

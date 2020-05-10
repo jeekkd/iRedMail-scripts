@@ -25,7 +25,7 @@
 # Read input
 domain="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Remove a domain from iRedMail. This does not remove associates mail accounts or mailboxes. \n"
 	printf "Usage: sh remove-domain.sh example.com \n"
 	exit 0

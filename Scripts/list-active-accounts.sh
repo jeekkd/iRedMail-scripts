@@ -21,7 +21,7 @@
 # psql -d vmail
 # sql> \i /path/to/output.sql;
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -gt 0 ]; then
 	printf "Purpose: Lists active email accounts in iRedmail. \n"
 	printf "Usage: sh list-active-accounts.sh \n"
 	exit 0

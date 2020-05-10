@@ -24,7 +24,7 @@
 # Read input
 aliasName="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -eq 0 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Re-activates, or turns back on, an alias in iRedmail. \n"
 	printf "Usage: sh set-alias-active.sh alias@mydomain.com \n"
 	exit 0

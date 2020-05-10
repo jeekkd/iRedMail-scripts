@@ -26,7 +26,7 @@
 domain="$1"
 quota="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Updates the default quota for mailbox size for a domain in iRedmail. \n"
 	printf "Usage: sh update-domain-quota.sh example.com 2048 \n"
 	exit 0

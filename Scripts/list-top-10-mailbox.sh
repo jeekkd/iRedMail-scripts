@@ -21,7 +21,7 @@
 # psql -d vmail
 # sql> \i /path/to/output.sql;
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -gt 0 ]; then
 	printf "Purpose: Lists top 10 mailboxes in vmail db in used_quota from largest to smallest in iRedmail. \n"
 	printf "Usage: sh list-top-10-mailbox.sh \n"
 	exit 0
