@@ -1,3 +1,6 @@
+| iRedMail version compatibility  | 1.2.1 |
+| ------------- | ------------- |
+
 Administrative scripts for iRedMail, useful if you do not use iRedAdmin, or you do not have iRedAdmin Pro.
 
 Read the examples and usage in each script to understand the parameters to use. Each script will generate SQL for you to use. These scripts are for a iRedMail installation with an SQL back end, specifically PostgreSQL.
@@ -45,7 +48,7 @@ There are scripts so far to do the following administrative functions:
 |               | disable-mail-forwarding.sh          | Disables mail forwarding from a given address to another entered address, but do not delete the configured forward                          |
 | Domain        |                                     |                                                                                                                                             |
 |               | add-domain.sh                       | Creates a new domain in the database, after which you can begin creating user accounts in the new domain                                    |
-|               | update-domain.sh                    | Change domain name of an existing domain and associated mail accounts																		|
+|               | change-domain.sh                    | Change domain name of an existing domain and associated mail accounts																		|
 |               | remove-domain.sh                    | Removes a domain from the database																											|
 |               | update-domain-quota.sh              | Updates the domain wide mailbox quota																										|
 |               | update-all-domain-quota.sh          | Updates all existing domains with a new default mailbox quota                                                                               |

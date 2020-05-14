@@ -7,12 +7,12 @@
 #
 # WARNING: This changes ONLY the SQL side, the mail directory needs to be renamed as well as any existing maildir to reflect the new domain.
 #
-# sh update-domain.sh old-domain.com new-domain.com
+# sh change-domain.sh old-domain.com new-domain.com
 #
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 # 
-# sh update-domain.sh old-domain.com new-domain.com > output.sql
+# sh change-domain.sh old-domain.com new-domain.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -30,7 +30,7 @@ new="$2"
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Change domain name of an existing domain and associated mail accounts in iRedmail. \n"
 	printf "WARNING: This changes ONLY the SQL side, the mail directory needs to be renamed as well as any existing maildir to reflect the new domain. \n"
-	printf "Usage: sh update-domain.sh old-domain.com new-domain.com \n"
+	printf "Usage: sh change-domain.sh old-domain.com new-domain.com \n"
 	exit 0
 fi
 
