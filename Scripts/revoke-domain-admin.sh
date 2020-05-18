@@ -31,3 +31,5 @@ if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 1 ] || 
 fi
 
 printf "UPDATE domain_admins SET active = '0' WHERE username = '$username';\n"
+printf "UPDATE mailbox SET isadmin = '0' WHERE username = '${username}';\n"
+printf "UPDATE mailbox SET isglobaladmin = '0' WHERE username = '${username}';\n"

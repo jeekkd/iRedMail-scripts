@@ -31,3 +31,5 @@ if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; th
 fi
 
 printf "DELETE from domain_admins WHERE username = '${username}'; \n"
+printf "UPDATE mailbox SET isadmin = '0' WHERE username = '${username}';\n"
+printf "UPDATE mailbox SET isglobaladmin = '0' WHERE username = '${username}';\n"

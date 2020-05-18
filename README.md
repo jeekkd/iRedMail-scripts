@@ -17,8 +17,8 @@ There are scripts so far to do the following administrative functions:
 |				| remove-domain-admin.sh			  | Remove a users entry entirely from the domain_admins table																					|
 |               | remove-user.sh                      | Delete a user                                                                                                                               |
 |               | update-account-password.sh          | Update a users password                                                                                                                     |
-|               | disable-mail-forwarding.sh          | De-activate a user account                                                                                                                  |
-|               | disable-mail-forwarding.sh          | Re-activate a user account                                                                                                                  |
+|               | disable-user.sh                     | De-activate a user account                                                                                                                  |
+|               | enable-user.sh                      | Re-enables a disabled user account                                                                                                          |
 |               | list-active-accounts.sh             | List active user accounts                                                                                                                   |
 |               | list-inactive-accounts.sh           | List inactive user accounts                                                                                                                 |
 |               | list-all-but-regular-accounts.sh    | Lists all from the forwardings table that are not just regular accounts                                                                     |

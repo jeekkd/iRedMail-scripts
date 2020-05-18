@@ -36,3 +36,11 @@ if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; th
 fi
 
 printf "INSERT INTO domain_admins (username, domain, active) VALUES ('${username}', '${domain}', 1); \n"
+printf "UPDATE mailbox SET isadmin = '1' WHERE username = '${username}';\n"
+
+if [ "$domain" = "all" ] ||  [ "$domain" = "ALL" ]; then
+	printf "UPDATE mailbox SET isglobaladmin = '1' WHERE username = '${username}';\n"
+else
+	printf "UPDATE mailbox SET isglobaladmin = '0' WHERE username = '${username}';\n"
+fi
+
