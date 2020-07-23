@@ -18,13 +18,13 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
 username="$1"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 1 ] || [ $# -gt 1 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 1 ] || [ $# -ne 1 ]; then
 	printf "Purpose: Revokes a users domain administrator permission in iRedMail. \n"
 	printf "Usage: sh revoke-domain-admin.sh user@example.com \n"
 	exit 0

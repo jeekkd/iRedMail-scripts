@@ -20,7 +20,7 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
@@ -29,6 +29,7 @@ sendToEmail="$2"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Add a user to an alias in iRedmail. \n"
+	printf "Note: The alias needs to exist first before you can add users to it. \n"
 	printf "Usage: sh add-user-to-alias.sh alias@mydomain.com jeff@gmail.com \n"
 	exit 0
 fi

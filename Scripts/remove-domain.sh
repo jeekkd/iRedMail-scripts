@@ -19,7 +19,7 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
@@ -27,6 +27,7 @@ domain="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Remove a domain from iRedMail. This does not remove associates mail accounts or mailboxes. \n"
+	printf "Note: Once the domain is removed from the database, you can they use remove-user.sh script to remove user accounts. \n"
 	printf "Usage: sh remove-domain.sh example.com \n"
 	exit 0
 fi

@@ -18,14 +18,14 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
 domain="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
-	printf "Purpose: Re-enables a disabled domain in iRedMail. \n"
+	printf "Purpose: Re-enable a disabled domain in iRedMail. \n"
 	printf "Usage: sh enable-domain.sh example.com \n"
 	exit 0
 fi

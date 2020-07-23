@@ -25,7 +25,7 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # --------- CHANGE THESE VALUES ----------
@@ -37,7 +37,7 @@ STORAGE_BASE_DIRECTORY="/var/vmail/vmail1"
 #
 # Password scheme. Available schemes: BCRYPT, SSHA512, SSHA, MD5, NTLM, PLAIN.
 # Check file Available
-PASSWORD_SCHEME='BCRYPT'
+PASSWORD_SCHEME='SSHA512'
 
 # Default mail quota (in MB).
 DEFAULT_QUOTA='1024'
@@ -59,10 +59,10 @@ ALIAS_ARRAY=("")
 # Default hash level is 3.
 MAILDIR_STYLE='hashed'      # hashed, normal.
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 2 ]; then
-	echo "Invalid command arguments. Usage:"
-    echo "bash create-new-user.sh user@example.com plain_password"
-    exit 255
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
+	echo "Purpose: Create a new user account in iRedmail setup with an SQL backend."
+    echo "Usage: bash create-new-user.sh user@example.com plain_password"
+    exit 0
 fi
 
 # Time stamp, will be appended in maildir.
@@ -124,3 +124,4 @@ if [ ! -z "$ALIAS_ARRAY" ]; then
 	done
 fi
 
+printf "UPDATE domain SET mailboxes = mailboxes + 1 WHERE domain = '${domain}';\n"

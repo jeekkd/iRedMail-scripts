@@ -1,4 +1,4 @@
-| iRedMail version compatibility  | 1.2.1 |
+| iRedMail version compatibility  | 1.3.1 |
 | ------------- | ------------- |
 
 Administrative scripts for iRedMail, useful if you do not use iRedAdmin, or you do not have iRedAdmin Pro.

@@ -20,7 +20,7 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
@@ -32,4 +32,4 @@ if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; th
 	exit 0
 fi
 
-printf "INSERT INTO domain VALUES domain = '$domain' AND active ='1';\n"
+printf "INSERT INTO domain (domain, active) VALUES ('${domain}', 1); \n"

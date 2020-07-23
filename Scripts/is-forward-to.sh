@@ -19,7 +19,7 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
@@ -27,6 +27,7 @@ address="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Determine if a given email address has forwards set from itself to other email addreses in iRedmail. \n"
+	printf "Note: If you see an address to itself in the forwarding column this is normal and is required for a regular account and mailbox to function. \n"
 	printf "Usage: sh is-forward-to.sh jeff@example.com \n"
 	exit 0
 fi

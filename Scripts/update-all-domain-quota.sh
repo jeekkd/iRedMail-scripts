@@ -19,14 +19,14 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
 domain="$1"
 quota="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Updates the default quota for mailbox size for all domains, setting applies to all newly created mailboxes, in iRedmail. \n"
 	printf "Usage: sh update-all-domain-quota.sh 2048 \n"
 	exit 0

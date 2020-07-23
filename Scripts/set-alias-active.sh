@@ -2,7 +2,7 @@
 #
 # Author: 	Daulton
 # Website: 	daulton.ca
-# Purpose: 	Re-activates, or turns back on, an alias in iRedmail.
+# Purpose: 	Re-activates an alias in iRedmail.
 # License: 	2-clause BSD license
 #
 # Example usage: sh set-alias-active.sh alias@mydomain.com
@@ -18,14 +18,14 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
 aliasName="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
-	printf "Purpose: Re-activates, or turns back on, an alias in iRedmail. \n"
+	printf "Purpose: Re-activates an alias in iRedmail. \n"
 	printf "Usage: sh set-alias-active.sh alias@mydomain.com \n"
 	exit 0
 fi

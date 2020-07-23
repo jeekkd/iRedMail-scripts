@@ -25,7 +25,7 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/create-new-user-bulk.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/create-new-user-bulk.sql;
 #
 # --------- CHANGE THESE VALUES ----------
@@ -78,11 +78,11 @@ get_script_dir() {
 # Leave here to get scripts running location
 get_script_dir
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 1 ]; then
-	echo "The CSV file used must have the format of email address,full name,password. Example: jeff@example.com,Jeff Gretzky,12345678"
-	echo "Invalid command arguments. Usage:"
-    echo "bash create-new-user-bulk.sh new-users.csv"
-    exit 255
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
+	echo "Purpose: Bulk creation of new user accounts in iRedmail setup with an SQL backend."
+	echo "Note: The CSV file used must have the format of email address,full name,password. Example: jeff@example.com,Jeff Gretzky,12345678"
+	echo "Usage: bash create-new-user-bulk.sh new-users.csv"
+    exit 0
 fi
 
 # Time stamp, will be appended in maildir.
@@ -148,6 +148,8 @@ while read csv; do
 			printf "INSERT INTO forwardings (address, forwarding, domain, dest_domain, active) VALUES '${ALIAS_ARRAY[$i]}@${domain}', '${mail}', '${domain}', '${domain}', 1); \n" | tee "$script_dir"/create-new-user-bulk.sql
 		done
 	fi
+
+	printf "UPDATE domain SET mailboxes = mailboxes + 1 WHERE domain = '${domain}';\n"
 
 	count=`expr $count + 1`
 done < "$1"

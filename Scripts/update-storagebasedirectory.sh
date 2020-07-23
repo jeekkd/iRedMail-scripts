@@ -21,17 +21,23 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
 current="$1"
 new="$2"
+domain="$3"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 3 ]; then
 	printf "Purpose: Updates the storagebasedirectory in iRedmail, this by default is /var/vmail. \n"
-	printf "Usage: sh update-storagebasedirectory.sh /var/vmail /var/someNewLocation \n"
+	printf "Note: This can apply to all user accounts regardless of domain, or you can specify a domain. In the third parameter put ALL for every domain, or list a specific domain. \n"
+	printf "Usage: sh update-storagebasedirectory.sh /var/vmail /var/someNewLocation example.com \n"
 	exit 0
 fi
 
-printf "UPDATE mailbox SET storagebasedirectory = '$new' WHERE storagebasedirectory = '$current';\n"
+if [ "$domain" = "all" ] ||  [ "$domain" = "ALL" ]; then
+	printf "UPDATE mailbox SET storagebasedirectory = '$new' WHERE storagebasedirectory = '$current';\n"
+else
+	printf "UPDATE mailbox SET storagebasedirectory = '$new' WHERE storagebasedirectory = '$current' AND domain = '$domain';\n"
+fi

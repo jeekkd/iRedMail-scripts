@@ -18,17 +18,19 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
 dlName="$1"
-domainName="$2"
 
-if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
+if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Creates an alias in iRedmail, email sent to an alias goes to all addresses added onto the alias. \n"
-	printf "Usage: sh create-alias.sh alias@mydomain.com mydomain.com \n"
+	printf "Usage: sh create-alias.sh alias@mydomain.com \n"
 	exit 0
 fi
 
-printf "INSERT INTO alias (address, domain, active) VALUES ('${dlName}', '${domainName}', 1); \n"
+domain=$(echo $dlName | cut -f 2 -d '@')
+
+printf "INSERT INTO alias (address, domain, active) VALUES ('${dlName}', '${domain}', 1); \n"
+printf "UPDATE domain SET aliases = aliases + 1 WHERE domain = '${domain}';\n"

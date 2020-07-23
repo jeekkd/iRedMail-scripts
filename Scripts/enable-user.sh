@@ -25,7 +25,7 @@
 username="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
-	printf "Purpose: Re-enables a disabled user account in iRedmail. \n"
+	printf "Purpose: Re-enable a disabled user account in iRedmail. \n"
 	printf "Usage: sh enable-user.sh jeff@example.com \n"
 	exit 0
 fi

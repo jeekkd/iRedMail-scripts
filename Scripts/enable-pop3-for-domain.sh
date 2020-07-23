@@ -22,7 +22,7 @@
 # mysql> USE vmail;
 # mysql> SOURCE /path/to/output.sql;
 #
-# psql -d vmail
+# psql -U vmailadmin -d vmail
 # sql> \i /path/to/output.sql;
 
 # Read input
@@ -30,6 +30,7 @@ domain="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Enables enablepop3,enablepop3secured,enablepop3tls in the mailbox table for a given domain to be 1 (enabled) in iRedmail so to enable pop3. \n"
+	printf "Note: This is a one time change for all CURRENT user accounts, future accounts require the use of enable-pop3-for-user.sh to disable pop3 for an individual account. \n"
 	printf "Usage: sh enable-pop3-for-domain.sh example.com \n"
 	exit 0
 fi

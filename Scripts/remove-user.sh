@@ -30,5 +30,8 @@ if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; th
 	exit 0
 fi
 
+domain=$(echo $address | cut -f 2 -d '@')
+
 printf "DELETE from forwardings WHERE address = '${address}' AND forwarding = '${address}'; \n"
 printf "DELETE from mailbox WHERE username = '${address}'; \n"
+printf "UPDATE domain SET mailboxes = mailboxes - 1 WHERE domain = '${domain}';\n"
