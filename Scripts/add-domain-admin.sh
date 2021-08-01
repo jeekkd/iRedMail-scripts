@@ -8,7 +8,7 @@
 # Note: Replace ALL with a specific domain name if you want the user to be restricted to administer only
 # a specific domain.
 #
-# sh new-domain-admin.sh user@example.com ALL
+# sh add-domain-admin.sh user@example.com ALL
 #
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
@@ -31,7 +31,7 @@ domain="$2"
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Makes an existing user a domain admin in iRedMail. \n"
 	printf "Note: Replace ALL with a specific domain name if you want the user to be restricted to administer only a specific domain. \n"
-	printf "Usage: sh new-domain-admin.sh user@example.com ALL \n"
+	printf "Usage: sh add-domain-admin.sh user@example.com ALL\n"
 	exit 0
 fi
 
