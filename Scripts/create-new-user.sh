@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #
 # Author: 		Daulton
 # Website: 		daulton.ca
