@@ -10,7 +10,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh list-all-accounts.sh > output.sql
+# bash list-all-accounts.sh > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -23,7 +23,7 @@
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -gt 0 ]; then
 	printf "Purpose: Lists all email accounts in iRedmail from the mailbox table, does not include aliases. \n"
-	printf "Usage: sh list-all-accounts.sh \n"
+	printf "Usage: bash list-all-accounts.sh \n"
 	exit 0
 fi
 

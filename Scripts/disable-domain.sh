@@ -5,12 +5,12 @@
 # Purpose: 	Disables a domain in iRedMail.
 # License: 	2-clause BSD license
 #
-# sh disable-domain.sh example.com
+# bash disable-domain.sh example.com
 #
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 # 
-# sh disable-domain.sh example.com > output.sql
+# bash disable-domain.sh example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -26,7 +26,7 @@ domain="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Disables a domain in iRedMail. \n"
-	printf "Usage: sh disable-domain.sh example.com \n"
+	printf "Usage: bash disable-domain.sh example.com \n"
 	exit 0
 fi
 

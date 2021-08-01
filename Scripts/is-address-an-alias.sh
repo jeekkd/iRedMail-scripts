@@ -6,12 +6,12 @@
 # License: 	2-clause BSD license
 # Reference: https://docs.iredmail.org/sql.create.mail.alias
 #
-# sh is-address-an-alias.sh jeff@example.com
+# bash is-address-an-alias.sh jeff@example.com
 # 
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh is-address-an-alias.sh jeff@example.com > output.sql
+# bash is-address-an-alias.sh jeff@example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -27,7 +27,7 @@ address="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Determine if a given email address is an alias in iRedmail. \n"
-	printf "Usage: sh is-address-an-alias.sh jeff@example.com \n"
+	printf "Usage: bash is-address-an-alias.sh jeff@example.com \n"
 	exit 0
 fi
 

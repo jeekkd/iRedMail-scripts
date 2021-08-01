@@ -10,7 +10,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh remove-forwarding.sh alias@mydomain.com jeff@gmail.com > output.sql
+# bash remove-forwarding.sh alias@mydomain.com jeff@gmail.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -27,7 +27,7 @@ destinationAddress="$2"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Remove mail forwarding for a user or remove a user from an alias in iRedmail. \n"
-	printf "Usage: sh remove-forwarding.sh alias@mydomain.com jeff@gmail.com \n"
+	printf "Usage: bash remove-forwarding.sh alias@mydomain.com jeff@gmail.com \n"
 	exit 0
 fi
 

@@ -10,7 +10,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh enable-user.sh jeff@example.com > output.sql
+# bash enable-user.sh jeff@example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -26,7 +26,7 @@ username="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Re-enable a disabled user account in iRedmail. \n"
-	printf "Usage: sh enable-user.sh jeff@example.com \n"
+	printf "Usage: bash enable-user.sh jeff@example.com \n"
 	exit 0
 fi
 

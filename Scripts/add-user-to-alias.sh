@@ -12,7 +12,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh add-user-to-alias.sh alias@mydomain.com jeff@gmail.com > output.sql
+# bash add-user-to-alias.sh alias@mydomain.com jeff@gmail.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -30,7 +30,7 @@ sendToEmail="$2"
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Add a user to an alias in iRedmail. \n"
 	printf "Note: The alias needs to exist first before you can add users to it. \n"
-	printf "Usage: sh add-user-to-alias.sh alias@mydomain.com jeff@gmail.com \n"
+	printf "Usage: bash add-user-to-alias.sh alias@mydomain.com jeff@gmail.com \n"
 	exit 0
 fi
 

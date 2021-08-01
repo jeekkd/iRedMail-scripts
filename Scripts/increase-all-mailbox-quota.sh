@@ -12,7 +12,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 # 
-# sh increase-all-mailbox-quota.sh example.com 2048 > output.sql
+# bash increase-all-mailbox-quota.sh example.com 2048 > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -30,7 +30,7 @@ quota="$2"
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Increases the mail box quota size for all users regardless of domain, or for a specific domain, in iRedmail. \n"
 	printf "Note: Replace the domain name with a quoted asterisk (*) to update all current users with the new mailbox quota size."
-	printf "Usage: sh increase-all-mailbox-quota.sh example.com 2048 OR sh increase-all-mailbox-quota.sh \"*\" 2048 \n"
+	printf "Usage: bash increase-all-mailbox-quota.sh example.com 2048 OR sh increase-all-mailbox-quota.sh \"*\" 2048 \n"
 	exit 0
 fi
 

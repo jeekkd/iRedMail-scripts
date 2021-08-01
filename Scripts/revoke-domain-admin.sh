@@ -5,12 +5,12 @@
 # Purpose: 	Revokes a users domain administrator permission in iRedMail.
 # License: 	2-clause BSD license
 #
-# sh revoke-domain-admin.sh user@example.com
+# bash revoke-domain-admin.sh user@example.com
 #
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 # 
-# sh revoke-domain-admin.sh user@example.com > output.sql
+# bash revoke-domain-admin.sh user@example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -26,7 +26,7 @@ username="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -lt 1 ] || [ $# -ne 1 ]; then
 	printf "Purpose: Revokes a users domain administrator permission in iRedMail. \n"
-	printf "Usage: sh revoke-domain-admin.sh user@example.com \n"
+	printf "Usage: bash revoke-domain-admin.sh user@example.com \n"
 	exit 0
 fi
 

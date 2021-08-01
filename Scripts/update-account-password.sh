@@ -17,7 +17,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 # 
-# sh update-account-password.sh jeff@example.com {SSHA512}ZJrxEEz44aTyd/srPRU3RH4zThW4PHFIDSGYyADEE/D3QUyrgWmiKHyajWN2SQA4+VAk6X5ePaqwbMQqqICj3BCnhYgc/SDc > output.sql
+# bash update-account-password.sh jeff@example.com {SSHA512}ZJrxEEz44aTyd/srPRU3RH4zThW4PHFIDSGYyADEE/D3QUyrgWmiKHyajWN2SQA4+VAk6X5ePaqwbMQqqICj3BCnhYgc/SDc > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -40,7 +40,7 @@ if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; th
 	printf "Purpose: Updates the password for a user account in iRedmail. \n"
 	printf "Note: You can also use this script to change hashing algorithms. If you made an account with SHA512 but actually wanted bcrypt you can change that by updating the password."
 	printf "Note: Default password scheme is SSHA512, enter a different scheme as the third parameter if you wish to override. Available schemes: BCRYPT, SSHA512, SSHA, MD5, NTLM, PLAIN. \n"
-	printf "Usage: sh update-account-password.sh jeff@example.com Password123 \n"
+	printf "Usage: bash update-account-password.sh jeff@example.com Password123 \n"
 	exit 0
 fi
 

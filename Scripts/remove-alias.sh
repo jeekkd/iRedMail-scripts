@@ -10,7 +10,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh remove-alias.sh alias@mydomain.com > output.sql
+# bash remove-alias.sh alias@mydomain.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -26,7 +26,7 @@ aliasName="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Creates an alias address which can be used to send email to multiple users at once when they are added 'onto' the alias in iRedmail. \n"
-	printf "Usage: sh remove-alias.sh alias@mydomain.com \n"
+	printf "Usage: bash remove-alias.sh alias@mydomain.com \n"
 	exit 0
 fi
 

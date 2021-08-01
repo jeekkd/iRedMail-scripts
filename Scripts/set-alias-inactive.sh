@@ -10,7 +10,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh set-alias-inactive.sh alias@mydomain.com > output.sql
+# bash set-alias-inactive.sh alias@mydomain.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -26,7 +26,7 @@ aliasName="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Updates an alias to become inactive in iRedmail. \n"
-	printf "Usage: sh set-alias-inactive.sh alias@mydomain.com \n"
+	printf "Usage: bash set-alias-inactive.sh alias@mydomain.com \n"
 	exit 0
 fi
 

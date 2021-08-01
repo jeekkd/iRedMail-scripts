@@ -6,7 +6,7 @@
 # License: 	2-clause BSD license
 # Note: 	This is a one time change for all CURRENT user accounts, future accounts require the use of disable-pop3-for-user.sh to disable pop3 for an individual account.
 #
-# Usage: sh disable-pop3-for-domain.sh example.com
+# Usage: bash disable-pop3-for-domain.sh example.com
 #
 # Note: You can verify if this was successful with the following command:
 # select username,domain,enablepop3,enablepop3secured,enablepop3tls FROM mailbox;
@@ -14,7 +14,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 # 
-# sh disable-pop3-for-domain.sh example.com > output.sql
+# bash disable-pop3-for-domain.sh example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -31,7 +31,7 @@ domain="$1"
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Disables enablepop3,enablepop3secured,enablepop3tls in the mailbox table for a given domain to be 0 (disabled) in iRedmail so to disable pop3. \n"
 	printf "Note: This is a one time change for all CURRENT user accounts, future accounts require the use of disable-pop3-for-user.sh to disable pop3 for an individual account. \n"
-	printf "Usage: sh disable-pop3-for-domain.sh example.com \n"
+	printf "Usage: bash disable-pop3-for-domain.sh example.com \n"
 	exit 0
 fi
 

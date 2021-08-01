@@ -10,7 +10,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh remove-user.sh jeff@example.com > output.sql
+# bash remove-user.sh jeff@example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -26,7 +26,7 @@ address="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Removes a user account from the database in iRedmail, this does not delete the mailbox stored on the filesystem. \n"
-	printf "Usage: sh remove-user.sh jeff@example.com \n"
+	printf "Usage: bash remove-user.sh jeff@example.com \n"
 	exit 0
 fi
 

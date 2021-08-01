@@ -11,7 +11,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 # 
-# sh update-domain-quota.sh example.com 2048 > output.sql
+# bash update-domain-quota.sh example.com 2048 > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -29,7 +29,7 @@ quota="$2"
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Updates the default quota for mailbox size for a domain in iRedmail. \n"
 	printf "Note: example.com is the name of your domain and 2048 is the new domain quota for NEWLY created mailboxes. \n"
-	printf "Usage: sh update-domain-quota.sh example.com 2048 \n"
+	printf "Usage: bash update-domain-quota.sh example.com 2048 \n"
 	exit 0
 fi
 

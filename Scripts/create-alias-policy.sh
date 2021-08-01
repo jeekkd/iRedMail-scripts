@@ -20,7 +20,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh create-alias-policy.sh alias@mydomain.com public > output.sql
+# bash create-alias-policy.sh alias@mydomain.com public > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -45,7 +45,7 @@ if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; th
 	printf "moderatorsonly 	only moderators of this mail alias account are allowed. \n"
 	printf "membersandmoderatorsonly 	only members and moderators of this mail alias account are allowed. \n"
 	printf "\n"
-	printf "Usage: sh create-alias-policy.sh alias@mydomain.com public \n"
+	printf "Usage: bash create-alias-policy.sh alias@mydomain.com public \n"
 	exit 0
 fi
 

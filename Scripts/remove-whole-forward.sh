@@ -10,7 +10,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh remove-whole-forward.sh contact@mydomain.com > output.sql
+# bash remove-whole-forward.sh contact@mydomain.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -27,7 +27,7 @@ destinationAddress="$2"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Removes the whole forwarding address and all forwards associated to it in iRedMail. \n"
-	printf "Usage: sh remove-whole-forward.sh contact@mydomain.com \n"
+	printf "Usage: bash remove-whole-forward.sh contact@mydomain.com \n"
 	exit 0
 fi
 

@@ -5,12 +5,12 @@
 # Purpose: 	Enables enableimap,enableimapsecured,enableimaptls in the mailbox table for a given user to be 1 (enabled) in iRedmail so to enable IMAP.
 # License: 	2-clause BSD license
 #
-# sh enable-imap-for-user.sh jeff@example.com
+# bash enable-imap-for-user.sh jeff@example.com
 #
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 # 
-# sh enable-imap-for-user.sh jeff@example.com > output.sql
+# bash enable-imap-for-user.sh jeff@example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -26,7 +26,7 @@ username="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Enables enableimap,enableimapsecured,enableimaptls in the mailbox table for a given user to be 1 (enabled) in iRedmail so to enable IMAP. \n"
-	printf "Usage: sh enable-imap-for-user.sh jeff@example.com \n"
+	printf "Usage: bash enable-imap-for-user.sh jeff@example.com \n"
 	exit 0
 fi
 

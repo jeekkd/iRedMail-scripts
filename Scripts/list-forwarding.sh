@@ -10,7 +10,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh list-forwarding-active.sh > output.sql
+# bash list-forwarding-active.sh > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -23,7 +23,7 @@
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -gt 0 ]; then
 	printf "Purpose: Lists all active email forwarding configurations in iRedmail. \n"
-	printf "Usage: sh list-forwarding-active.sh \n"
+	printf "Usage: bash list-forwarding-active.sh \n"
 	exit 0
 fi
 

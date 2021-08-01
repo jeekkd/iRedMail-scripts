@@ -12,7 +12,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh add-mail-forward.sh user@example.com otherUser@example.com > output.sql
+# bash add-mail-forward.sh user@example.com otherUser@example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -29,7 +29,7 @@ forwardToEmail="$2"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 2 ]; then
 	printf "Purpose: Creates a mail forwarding setup to direct email sent to user@example.com otherUser@example.com in iRedmail. \n"
-	printf "Usage: sh add-mail-forward.sh user@example.com otherUser@example.com \n"
+	printf "Usage: bash add-mail-forward.sh user@example.com otherUser@example.com \n"
 	exit 0
 fi
 

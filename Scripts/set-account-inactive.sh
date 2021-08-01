@@ -10,7 +10,7 @@
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh sh set-account-inactive.sh jeff@example.com > output.sql
+# bash sh set-account-inactive.sh jeff@example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -26,7 +26,7 @@ address="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Deactivate a user account iRedmail. \n"
-	printf "Usage: sh set-account-inactive.sh jeff@example.com \n"
+	printf "Usage: bash set-account-inactive.sh jeff@example.com \n"
 	exit 0
 fi
 

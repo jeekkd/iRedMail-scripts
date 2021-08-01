@@ -5,12 +5,12 @@
 # Purpose: 	Determine if a given email address has forwards set from itself to other email addreses in iRedmail.
 # License: 	2-clause BSD license
 #
-# sh is-forward-from.sh jeff@example.com
+# bash is-forward-from.sh jeff@example.com
 # 
 # This will print SQL commands on the console directly, you can redirect the
 # output to a file for further use like this:
 #
-# sh is-forward-from.sh jeff@example.com > output.sql
+# bash is-forward-from.sh jeff@example.com > output.sql
 #
 # Import output.sql into SQL database like below:
 #
@@ -26,7 +26,7 @@ address="$1"
 
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "/h" ] || [ $# -ne 1 ]; then
 	printf "Purpose: Determine if a given email address has forwards set from itself to other email addreses in iRedmail. \n"
-	printf "Usage: sh is-forward-from.sh jeff@example.com \n"
+	printf "Usage: bash is-forward-from.sh jeff@example.com \n"
 	exit 0
 fi
 
