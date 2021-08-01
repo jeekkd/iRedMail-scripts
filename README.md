@@ -38,6 +38,8 @@ There are scripts so far to do the following administrative functions:
 |               | set-alias-active.sh                 | Set an alias as active                                                                                                                      |
 |               | set-alias-inactive.sh               | Set an alias as inactive                                                                                                                    |
 |               | is-address-an-alias.sh              | Check if a given email address is an alias                                                                                                  |
+|               | add-alias-domain.sh                 | Add an alias domain                                                                                                                         |
+|               | remove-alias-domain.sh              | Remove an alias domain                                                                                                                      |
 | Forwarding    |                                     |                                                                                                                                             |
 |               | list-forwarding.sh                  | List any configured forwards                                                                                                                |
 |               | remove-forwarding.sh                | Deletes mail forwarding from a given address to another entered address                                                                     |
